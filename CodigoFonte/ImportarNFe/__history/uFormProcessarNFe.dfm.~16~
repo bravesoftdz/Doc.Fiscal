@@ -1,0 +1,322 @@
+object FormProcessarNFe: TFormProcessarNFe
+  Left = 0
+  Top = 0
+  Caption = 'Processamento de Nota Fiscal Eletr'#244'nica (Entrada)'
+  ClientHeight = 484
+  ClientWidth = 846
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object pnlDadosNFe: TPanel
+    Left = 0
+    Top = 0
+    Width = 846
+    Height = 73
+    Align = alTop
+    TabOrder = 0
+    object lblChaveNFe: TLabel
+      Left = 13
+      Top = 13
+      Width = 63
+      Height = 13
+      Caption = 'Caminho NFe'
+    end
+    object edtCaminhoNFe: TEdit
+      Left = 13
+      Top = 32
+      Width = 388
+      Height = 21
+      TabOrder = 0
+    end
+    object btnLerXML: TButton
+      Left = 405
+      Top = 30
+      Width = 75
+      Height = 25
+      Caption = 'Ler XML'
+      TabOrder = 1
+      OnClick = btnLerXMLClick
+    end
+  end
+  object pnlItensNFe: TPanel
+    Left = 0
+    Top = 73
+    Width = 846
+    Height = 370
+    Align = alClient
+    TabOrder = 1
+    object pgDadosNFe: TPageControl
+      Left = 1
+      Top = 1
+      Width = 844
+      Height = 368
+      ActivePage = tabEmitente
+      Align = alClient
+      TabOrder = 0
+      object tabDadosNFe: TTabSheet
+        Caption = 'Nota Fiscal'
+        ImageIndex = 1
+      end
+      object tabEmitente: TTabSheet
+        Caption = 'Fornecedor'
+        ImageIndex = 2
+        object lblRazaoSocial: TLabel
+          Left = 9
+          Top = 78
+          Width = 60
+          Height = 13
+          Caption = 'Raz'#227'o Social'
+        end
+        object lblNomeFantasia: TLabel
+          Left = 9
+          Top = 130
+          Width = 71
+          Height = 13
+          Caption = 'Nome Fantasia'
+        end
+        object LBL_Telefone: TLabel
+          Left = 407
+          Top = 130
+          Width = 42
+          Height = 13
+          Caption = 'Telefone'
+        end
+        object lblCNPJ: TLabel
+          Left = 9
+          Top = 16
+          Width = 25
+          Height = 13
+          Caption = 'CNPJ'
+        end
+        object lblInsEst: TLabel
+          Left = 212
+          Top = 16
+          Width = 68
+          Height = 13
+          Caption = 'Insc. Estadual'
+        end
+        object lblInsMun: TLabel
+          Left = 390
+          Top = 16
+          Width = 70
+          Height = 13
+          Caption = 'Insc. Municipal'
+        end
+        object lblCNAE: TLabel
+          Left = 513
+          Top = 78
+          Width = 27
+          Height = 13
+          Caption = 'CNAE'
+        end
+        object lblEndereco: TLabel
+          Left = 9
+          Top = 181
+          Width = 45
+          Height = 13
+          Caption = 'Endere'#231'o'
+        end
+        object lblEndNum: TLabel
+          Left = 390
+          Top = 181
+          Width = 37
+          Height = 13
+          Caption = 'N'#250'mero'
+        end
+        object lblBairro: TLabel
+          Left = 9
+          Top = 229
+          Width = 28
+          Height = 13
+          Caption = 'Bairro'
+        end
+        object lblCodCidade: TLabel
+          Left = 374
+          Top = 229
+          Width = 59
+          Height = 13
+          Caption = 'C'#243'd. Cidade'
+        end
+        object lblCidade: TLabel
+          Left = 478
+          Top = 229
+          Width = 33
+          Height = 13
+          Caption = 'Cidade'
+        end
+        object lblEstado: TLabel
+          Left = 690
+          Top = 229
+          Width = 13
+          Height = 13
+          Caption = 'UF'
+        end
+        object lblCEP: TLabel
+          Left = 236
+          Top = 229
+          Width = 19
+          Height = 13
+          Caption = 'CEP'
+        end
+        object lblComplemento: TLabel
+          Left = 478
+          Top = 181
+          Width = 65
+          Height = 13
+          Caption = 'Complemento'
+        end
+        object edtForRazaoSocial: TEdit
+          Left = 9
+          Top = 97
+          Width = 479
+          Height = 21
+          TabOrder = 0
+        end
+        object edtForNomeFantasia: TEdit
+          Left = 9
+          Top = 149
+          Width = 375
+          Height = 21
+          TabOrder = 1
+        end
+        object edtForCNPJ: TEdit
+          Left = 9
+          Top = 35
+          Width = 197
+          Height = 21
+          TabOrder = 2
+        end
+        object edtForInscricaoEstadual: TEdit
+          Left = 212
+          Top = 35
+          Width = 172
+          Height = 21
+          TabOrder = 3
+        end
+        object edtForTelefone: TEdit
+          Left = 407
+          Top = 149
+          Width = 121
+          Height = 21
+          TabOrder = 4
+        end
+        object edtForEndereco: TEdit
+          Left = 9
+          Top = 200
+          Width = 375
+          Height = 21
+          TabOrder = 5
+        end
+        object edtForCidade: TEdit
+          Left = 478
+          Top = 248
+          Width = 206
+          Height = 21
+          TabOrder = 6
+        end
+        object edtForBairro: TEdit
+          Left = 9
+          Top = 248
+          Width = 221
+          Height = 21
+          TabOrder = 7
+        end
+        object edtForEstado: TEdit
+          Left = 690
+          Top = 248
+          Width = 41
+          Height = 21
+          TabOrder = 8
+        end
+        object edtForCEP: TEdit
+          Left = 236
+          Top = 248
+          Width = 132
+          Height = 21
+          TabOrder = 9
+        end
+        object edtForCodCidade: TEdit
+          Left = 374
+          Top = 248
+          Width = 98
+          Height = 21
+          TabOrder = 10
+        end
+        object edtForEnderecoNum: TEdit
+          Left = 390
+          Top = 200
+          Width = 82
+          Height = 21
+          TabOrder = 11
+        end
+        object edtForInscricaoMun: TEdit
+          Left = 390
+          Top = 35
+          Width = 170
+          Height = 21
+          TabOrder = 12
+        end
+        object edtForCNAE: TEdit
+          Left = 513
+          Top = 97
+          Width = 165
+          Height = 21
+          TabOrder = 13
+        end
+        object edtForEndComplemento: TEdit
+          Left = 478
+          Top = 200
+          Width = 253
+          Height = 21
+          TabOrder = 14
+        end
+      end
+      object tabTransportadora: TTabSheet
+        Caption = 'Transportadora'
+        ImageIndex = 4
+      end
+      object tabDestinatario: TTabSheet
+        Caption = 'Empresa'
+        ImageIndex = 3
+      end
+      object tabImpostos: TTabSheet
+        Caption = 'Impostos'
+        ImageIndex = 5
+      end
+    end
+  end
+  object Panel1: TPanel
+    Left = 0
+    Top = 443
+    Width = 846
+    Height = 41
+    Align = alBottom
+    Caption = 'Panel1'
+    TabOrder = 2
+  end
+  object oDlgProcurarNFe: TOpenDialog
+    Left = 776
+    Top = 8
+  end
+  object ACBrNFe: TACBrNFe
+    Configuracoes.Geral.SSLLib = libNone
+    Configuracoes.Geral.SSLCryptLib = cryNone
+    Configuracoes.Geral.SSLHttpLib = httpNone
+    Configuracoes.Geral.SSLXmlSignLib = xsNone
+    Configuracoes.Geral.FormatoAlerta = 'TAG:%TAGNIVEL% ID:%ID%/%TAG%(%DESCRICAO%) - %MSG%.'
+    Configuracoes.Geral.VersaoQRCode = veqr000
+    Configuracoes.Arquivos.OrdenacaoPath = <>
+    Configuracoes.WebServices.UF = 'SP'
+    Configuracoes.WebServices.AguardarConsultaRet = 0
+    Configuracoes.WebServices.QuebradeLinha = '|'
+    Left = 696
+    Top = 16
+  end
+end

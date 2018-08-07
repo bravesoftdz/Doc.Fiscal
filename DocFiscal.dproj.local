@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2018/07/14 07:02:49.000.307,=C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\GroupedItems2.pas</Transaction>
+    <Transaction>2018/07/14 07:02:50.000.936,=C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\ItemDetail1.pas</Transaction>
+    <Transaction>2018/07/14 07:03:57.000.477,=C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/07/14 07:05:47.000.825,=C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\GridPaneView1.pas</Transaction>
+    <Transaction>2018/07/14 07:05:52.000.205,=C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\SplitPaneView1.pas</Transaction>
+    <Transaction>2018/07/14 20:23:36.000.615,=C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\AppletModule1.pas</Transaction>
+    <Transaction>2018/07/15 06:39:23.000.249,=C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\GroupedItems1.pas</Transaction>
+    <Transaction>2018/07/15 06:39:31.000.230,=C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\ItemDetail1.pas</Transaction>
+    <Transaction>2018/08/03 23:31:37.000.959,=C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2018/08/03 23:35:05.000.452,C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\WN\Programação\Projetos\Delphi\Doc.Fiscal\CodigoFonte\TelaInicial\uFormTelaInicial.dfm</Transaction>
+    <Transaction>2018/08/03 23:35:05.000.452,C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\WN\Programação\Projetos\Delphi\Doc.Fiscal\CodigoFonte\TelaInicial\uFormTelaInicial.pas</Transaction>
+    <Transaction>2018/08/03 23:35:24.000.426,C:\Users\MEUS DOCUMENTOS\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\WN\Programação\Projetos\Delphi\Doc.Fiscal\DocFiscal.dproj</Transaction>
+    <Transaction>2018/08/03 23:45:12.000.154,=C:\WN\Programação\Projetos\Delphi\Doc.Fiscal\Unit1.pas</Transaction>
+    <Transaction>2018/08/03 23:46:46.000.592,C:\WN\Programação\Projetos\Delphi\Doc.Fiscal\Unit1.dfm=C:\WN\Programação\Projetos\Delphi\Doc.Fiscal\CodigoFonte\ImportarNFe\uFormProcessarNFe.dfm</Transaction>
+    <Transaction>2018/08/03 23:46:46.000.592,C:\WN\Programação\Projetos\Delphi\Doc.Fiscal\Unit1.pas=C:\WN\Programação\Projetos\Delphi\Doc.Fiscal\CodigoFonte\ImportarNFe\uFormProcessarNFe.pas</Transaction>
+  </Transactions>
+</BorlandProject>

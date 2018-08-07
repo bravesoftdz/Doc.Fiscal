@@ -1,0 +1,130 @@
+unit uFormProcessarNFe;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.StdCtrls, Vcl.ComCtrls,
+  ACBrBase, ACBrDFe, ACBrNFe;
+
+type
+  TFormProcessarNFe = class(TForm)
+    pnlDadosNFe: TPanel;
+    pnlItensNFe: TPanel;
+    Panel1: TPanel;
+    pgDadosNFe: TPageControl;
+    edtCaminhoNFe: TEdit;
+    lblChaveNFe: TLabel;
+    btnLerXML: TButton;
+    tabDadosNFe: TTabSheet;
+    tabEmitente: TTabSheet;
+    tabDestinatario: TTabSheet;
+    tabTransportadora: TTabSheet;
+    tabImpostos: TTabSheet;
+    lblRazaoSocial: TLabel;
+    lblNomeFantasia: TLabel;
+    LBL_Telefone: TLabel;
+    lblCNPJ: TLabel;
+    lblInsEst: TLabel;
+    lblInsMun: TLabel;
+    lblCNAE: TLabel;
+    lblEndereco: TLabel;
+    lblEndNum: TLabel;
+    lblBairro: TLabel;
+    lblCodCidade: TLabel;
+    lblCidade: TLabel;
+    lblEstado: TLabel;
+    lblCEP: TLabel;
+    lblComplemento: TLabel;
+    edtForRazaoSocial: TEdit;
+    edtForNomeFantasia: TEdit;
+    edtForCNPJ: TEdit;
+    edtForInscricaoEstadual: TEdit;
+    edtForTelefone: TEdit;
+    edtForEndereco: TEdit;
+    edtForCidade: TEdit;
+    edtForBairro: TEdit;
+    edtForEstado: TEdit;
+    edtForCEP: TEdit;
+    edtForCodCidade: TEdit;
+    edtForEnderecoNum: TEdit;
+    edtForInscricaoMun: TEdit;
+    edtForCNAE: TEdit;
+    edtForEndComplemento: TEdit;
+    oDlgProcurarNFe: TOpenDialog;
+    ACBrNFe: TACBrNFe;
+    procedure btnLerXMLClick(Sender: TObject);
+  private
+    { Private declarations }
+    procedure LocalizarNFe;
+    procedure LerNFe;
+  public
+    { Public declarations }
+  end;
+
+var
+  FormProcessarNFe: TFormProcessarNFe;
+
+implementation
+
+{$R *.dfm}
+
+
+
+{ TFormProcessarNFe }
+
+procedure TFormProcessarNFe.btnLerXMLClick(Sender: TObject);
+begin
+  LocalizarNFe;
+  LerNFe;
+end;
+
+procedure TFormProcessarNFe.LerNFe;
+begin
+  try
+    ACBrNFe.NotasFiscais.Clear;
+    ACBrNFe.NotasFiscais.LoadFromFile(edtCaminhoNFe.Text);
+
+    //Carregar dados do fornecedor
+    edtForCNPJ.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.CNPJCPF;
+    edtForRazaoSocial.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.xNome;
+    edtForNomeFantasia.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.xFant;
+    edtForInscricaoEstadual.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.IE;
+    edtForInscricaoMun.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.IM;
+    edtForCNAE.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.CNAE;
+    edtForEndereco.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.EnderEmit.xLgr;
+    edtForEnderecoNum.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.EnderEmit.nro;
+    edtForEndComplemento.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.EnderEmit.xCpl;
+    edtForBairro.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.EnderEmit.xBairro;
+    edtForCEP.Text := IntToStr(ACBrNFe.NotasFiscais.Items[0].NFe.Emit.EnderEmit.CEP);
+    edtForCodCidade.Text := IntToStr(ACBrNFe.NotasFiscais.Items[0].NFe.Emit.EnderEmit.cMun);
+    edtForCidade.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.EnderEmit.xMun;
+    edtForEstado.Text := ACBrNFe.NotasFiscais.Items[0].NFe.Emit.EnderEmit.UF;
+
+  finally
+
+  end;
+end;
+
+procedure TFormProcessarNFe.LocalizarNFe;
+begin
+  oDlgProcurarNFe.InitialDir := (ExtractFilePath(Application.ExeName)+'Arquivos\NFe\Entrada');
+  //oDlgProcurarNFe.FileName := edtCaminhoNFe.Text;
+
+  if edtCaminhoNFe.Text <> '' then
+    begin
+      //Se o arquivo não existir
+      if not FileExists(edtCaminhoNFe.Text) then
+        begin
+          oDlgProcurarNFe.Execute;
+          edtCaminhoNFe.Text := oDlgProcurarNFe.FileName;
+        end;
+    end
+  else
+    begin
+      oDlgProcurarNFe.Execute;
+      edtCaminhoNFe.Text := oDlgProcurarNFe.FileName;
+    end;
+end;
+
+end.
